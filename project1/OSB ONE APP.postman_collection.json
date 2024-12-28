@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "3fe6a071-fafa-4449-ba9e-cb9514c85f88",
+		"name": "OSB ONE APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21993196"
+	},
+	"item": [
+		{
+			"name": "Cambio de plan",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TransactionId",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "X-PlatformId",
+						"value": "SIEBEL",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionDigitalInput\": {\r\n        \"listOfTransactionHomeActivator\": {\r\n            \"transactionHomeActivator\": {\r\n                \"sequence\": \"1\",\r\n                \"idTransaction\": \"1-1406642008719\",\r\n                \"idOrderChannel\": \"1-1406642008719\",\r\n                \"salesChannel\": \"PORTAL DIGITAL\",\r\n                \"salesAdvisor\": \"PORTAL DIGITAL\",\r\n                \"transaction\": \"MODIFICACION\",\r\n                \"serviceUse\": \"RESIDENCIAL\",\r\n                \"listOfComponentHomeActivator\": {\r\n                    \"componentHomeActivator\": [\r\n                        {\r\n                            \"serviceId\": \"1-HY7A1QZ0\",\r\n                            \"productComponentId\": \"1-6ID4LHBG\",\r\n                            \"action\": \"ELIMINAR\"\r\n                        },\r\n\t\t\t    {\r\n                            \"serviceId\": \"1-HY7A1QZ0\",\r\n                            \"productComponentId\": \"1-6ID4LHDA\",\r\n                            \"action\": \"NUEVO\"\r\n                        },\r\n                        {\r\n                            \"serviceId\": \"1-HY7A1QZ0\",\r\n                            \"productComponentId\": \"1-3S0S1WK\",\r\n                            \"action\": \"NUEVO\"\r\n                        }\r\n\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.69.42.105/esb/fix/crm/entity/crmtransactions",
+					"protocol": "http",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"esb",
+						"fix",
+						"crm",
+						"entity",
+						"crmtransactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Compra de paquete premium",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TransactionId",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "X-PlatformId",
+						"value": "SIEBEL",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionDigitalInput\": {\r\n        \"listOfTransactionHomeActivator\": {\r\n            \"transactionHomeActivator\": {\r\n                \"sequence\": \"1\",\r\n                \"idTransaction\": \"1-1406777107519\",\r\n                \"idOrderChannel\": \"1-1406777107519\",\r\n                \"salesChannel\": \"PORTAL DIGITAL\",\r\n                \"salesAdvisor\": \"PORTAL DIGITAL\",\r\n                \"transaction\": \"MODIFICACION\",\r\n                \"serviceUse\": \"RESIDENCIAL\",\r\n                \"listOfComponentHomeActivator\": {\r\n                    \"componentHomeActivator\": [\r\n                         {\r\n                            \"serviceId\": \"1-HY9IBX59\",\r\n                            \"productComponentId\": \"1-B4Z7S5U\",\r\n                            \"action\": \"NUEVO\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.69.42.105/esb/fix/crm/entity/crmtransactions",
+					"protocol": "http",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"esb",
+						"fix",
+						"crm",
+						"entity",
+						"crmtransactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCrmTransactions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-TransactionId",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "X-PlatformId",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://10.69.42.105/esb/fix/crm/entity/crmtransactions/TRA000000027215",
+					"protocol": "http",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"esb",
+						"fix",
+						"crm",
+						"entity",
+						"crmtransactions",
+						"TRA000000027215"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cambio de portafolio",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TransactionId",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "X-PlatformId",
+						"value": "SIEBEL",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionDigitalInput\": {\r\n        \"listOfTransactionHomeActivator\": {\r\n            \"transactionHomeActivator\": {\r\n                \"sequence\": \"1\",\r\n                \"idTransaction\": \"1-9111004163\",\r\n                \"idOrderChannel\": \"1-1392230425005\",\r\n                \"salesChannel\": \"PORTAL DIGITAL\",\r\n                \"salesAdvisor\": \"PORTAL DIGITAL\",\r\n                \"transaction\": \"MODIFICACION\",\r\n                \"serviceUse\": \"RESIDENCIAL\",\r\n                \"idFavorite\": \"1-E596K40W\",\r\n                \"listOfValGeneralHomeActivator\": {\r\n                    \"valGeneralHomeActivator\": [\r\n                        {\r\n                            \"name\": \"OFE_EMAIL\",\r\n                            \"value\": \"N\"\r\n                        },\r\n                        {\r\n                            \"name\": \"OFE_CORREO_FISICO\",\r\n                            \"value\": \"Y\"\r\n                        },\r\n                        {\r\n                            \"name\": \"OFE_FACTURA_WEB\",\r\n                            \"value\": \"N\"\r\n                        },\r\n                        {\r\n                            \"name\": \"OFE_SMS\",\r\n                            \"value\": \"N\"\r\n                        },\r\n                        {\r\n                            \"name\": \"SCO_CUPO\",\r\n                            \"value\": \"800000\"\r\n                        },\r\n                        {\r\n                            \"name\": \"SCO_ESTADO\",\r\n                            \"value\": \"APROBADO\"\r\n                        },\r\n                        {\r\n                            \"name\": \"SCO_NIVEL_RIESGO\",\r\n                            \"value\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"SCO_MOTIVO\",\r\n                            \"value\": \"SCORING\"\r\n                        },\r\n                        {\r\n                            \"name\": \"SCO_FECHA\",\r\n                            \"value\": \"07/10/2020\"\r\n                        },\r\n                        {\r\n                            \"name\": \"LEG_ESTADO\",\r\n                            \"value\": \"APROBADO\"\r\n                        },\r\n                        {\r\n                            \"name\": \"LEG_DESCRIPCION\",\r\n                            \"value\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"CMP_ACEPTO\",\r\n                            \"value\": \"Y\"\r\n                        },\r\n                        {\r\n                            \"name\": \"CONTRATO\",\r\n                            \"value\": \"1587566432\"\r\n                        },\r\n                        {\r\n                            \"name\": \"ID_SERVICIO_REFERENCIA\",\r\n                            \"value\": \"1-HRKZ0DXB\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.69.42.105/esb/fix/crm/entity/crmtransactions",
+					"protocol": "http",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"esb",
+						"fix",
+						"crm",
+						"entity",
+						"crmtransactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

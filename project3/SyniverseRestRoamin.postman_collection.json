@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "af292a93-af9d-42fc-8ca0-09fd699668e9",
+		"name": "SyniverseRestRoamin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21993196"
+	},
+	"item": [
+		{
+			"name": "Activate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let time = Math.floor(Date.now())\r",
+							"\r",
+							"pm.globals.set(\"time\", time);\r",
+							"\r",
+							"console.log('time: ' + time);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"CustomerID\":\"591\",\r\n\"Token\": \"359503a61077a34c385ba47225bfc2744dfed838\",\r\n\"IMSI\":\"888882222220004\",\r\n\"MSISDN\":\"+3010000001\",\r\n\"PackageCode\":\"nacion_tigo\",\r\n\"SubscriptionCount\":\"1\",\r\n\"SubscriptionMethod\":\"3\",\r\n\"EffectiveStartTime\":\"11/10/2021 00:00:00\",\r\n\"EffectiveEndTime\":\"12/11/2021 00:00:00\",\r\n\"TransactionID\":\"7f72d2178c18491797239bdafca434cc\",\r\n\"CurrentTime\":\"{{time}}\"\r\n}  \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rcc.dalab.syniverse.com/tigocoapi/rest/subscriptions/activate",
+					"protocol": "https",
+					"host": [
+						"rcc",
+						"dalab",
+						"syniverse",
+						"com"
+					],
+					"path": [
+						"tigocoapi",
+						"rest",
+						"subscriptions",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"CustomerID\":\"591\",\r\n\"Token\": \"a51c87a3ae524f95fc6865e74038092a645f32c2\",\r\n\"IMSI\":\"888882222220004\",\r\n\"MSISDN\":\"+3010000001\",\r\n\"PackageCode\":\"nacion_tigo\",\r\n\"TransactionID\":\"123\",\r\n\"CurrentTime\":\"1634082532776\"\r\n}  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rcc.dalab.syniverse.com/tigocoapi/rest/subscriptions/deactivate",
+					"protocol": "https",
+					"host": [
+						"rcc",
+						"dalab",
+						"syniverse",
+						"com"
+					],
+					"path": [
+						"tigocoapi",
+						"rest",
+						"subscriptions",
+						"deactivate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QuerysSubscriber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"CustomerID\":\"591\",\r\n\"Token\": \"317b0ea23d13a0e836913f394fb0b8978cc20535\",\r\n\"IMSI\":\"888882222220004\",\r\n\"MSISDN\":\"+3010000001\",\r\n\"TransactionID\":\"123\",\r\n\"CurrentTime\":\"1634082222371\"\r\n}  \r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rcc.dalab.syniverse.com/tigocoapi/rest/subscriptions/active",
+					"protocol": "https",
+					"host": [
+						"rcc",
+						"dalab",
+						"syniverse",
+						"com"
+					],
+					"path": [
+						"tigocoapi",
+						"rest",
+						"subscriptions",
+						"active"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

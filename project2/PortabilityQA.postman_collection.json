@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "1a160111-04f3-4490-a25a-3742e5521588",
+		"name": "PortabilityQA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21993196"
+	},
+	"item": [
+		{
+			"name": "portin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "platformid",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "transactionId",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"msisdn\": \"3005743085\",\r\n    \"destinationPlanPrepaid\": \"PLCON0214\", //Aquí va el ID no el plan como tal.\r\n    \"destinationPlanPostpaid\": \"\",\r\n    \"operatorTransactionID\": \"20170815150141215\",\r\n    \"portDate\": \"20-06-2017\",\r\n    \"msisdnTemporary\": \"3152188220\",\r\n    \"nip\": \"92345\",\r\n    \"clientInformation\": true,\r\n    \"subscriberData\": {\r\n        \"name\": \"Juan Santos\",\r\n        \"document\": {\r\n            \"type\": \"CC\",\r\n            \"number\": \"625305520\"\r\n        },\r\n        \"address\": \"cll 30 # 23-56\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.69.42.105/mobile/crm/task/portabilities/portin",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"mobile",
+						"crm",
+						"task",
+						"portabilities",
+						"portin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"msisdn\": \"3016898928\",\r\n    \"donorID\": \"106\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.69.42.105/mobile/crm/task/portabilities/pin",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"mobile",
+						"crm",
+						"task",
+						"portabilities",
+						"pin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "portinStatus",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "10.69.42.105/mobile/crm/task/portabilities/portin/3016898928/status",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"mobile",
+						"crm",
+						"task",
+						"portabilities",
+						"portin",
+						"3016898928",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PortinValidate",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "digital.2017",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "digital-user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"msisdn\": \"3005743085\",\r\n    \"document\": {\r\n        \"type\": \"CC\",\r\n        \"number\": \"625305520\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.69.42.105/mobile/crm/task/portabilities/portin/validate",
+					"host": [
+						"10",
+						"69",
+						"42",
+						"105"
+					],
+					"path": [
+						"mobile",
+						"crm",
+						"task",
+						"portabilities",
+						"portin",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
